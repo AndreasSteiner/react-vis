@@ -1,4 +1,4 @@
-> This library is deprecated. Please see `DEPRECATED.md`.
+> This fork provides some fixes for using this in ClojureScript.
 
 <p align="right">
   <a href="https://npmjs.org/package/react-vis">

@@ -270,8 +270,8 @@ class Hint extends PureComponent {
    * @private
    */
   _getPositionInfo() {
-    const {value, getAlignStyle} = this.props;
-
+    const {children, getAlignStyle} = this.props;
+    const value = children[1];
     const x = getAttributeFunctor(this.props, 'x')(value);
     const y = getAttributeFunctor(this.props, 'y')(value);
 
@@ -357,8 +357,9 @@ class Hint extends PureComponent {
   }
 
   render() {
-    const {value, format, children, style, className} = this.props;
-
+    const {format, children, style, className} = this.props;
+    const value = children[1];
+    const renderChildren = children[2];
     const {position, positionClassName} = this._getPositionInfo();
     return (
       <div
@@ -369,8 +370,8 @@ class Hint extends PureComponent {
           position: 'absolute'
         }}
       >
-        {children ? (
-          children
+        {renderChildren ? (
+          renderChildren
         ) : (
           <div className="rv-hint__content" style={style.content}>
             {format(value).map((formattedProp, i) => (
