@@ -1,6 +1,6 @@
 {
   "name": "react-vis-cljs",
-  "version": "1",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Andreas Steiner <andy.steiner@yahoo.de>",
   "description": "Data visualization library based on React and d3, with ClojreScript support.",
